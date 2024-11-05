@@ -1,22 +1,23 @@
-body{
+body {
     background-color: #000000;
     margin: 0;
     padding: 0;
 }
 
-body>header{
-    position:absolute;
-    position: fixed;
+body > header {
+    position: fixed; /* header의 위치를 고정 */
     top: 0;
     right: 0;
     left: 0;
+    z-index: 10; /* header의 z-index를 높여 navbar를 위에 나타나게 함 */
 }
 
 .navbar {
     display: flex;
     justify-content: flex-end;
-    background-color: #d1d1d1;
+    background-color: rgba(255, 255, 255, 0.7); /* 흰색의 반투명 배경색 */
     padding: 15px 20px;
+    z-index: 10; /* navbar의 z-index를 높게 설정 */
 }
 
 .navbar ul {
@@ -26,13 +27,12 @@ body>header{
     list-style-type: none;
 }
 
-
 .navbar li a {
     color: black;
     padding: 10px 35px;
     text-decoration: none;
     font-size: 16px;
-    font-weight: 100px;
+    font-weight: 100;
 }
 
 #bacco-image {
@@ -57,8 +57,8 @@ body>header{
 }
 
 .box {
-    width: 150px;
-    height: 230px;
+    width: 160px;
+    height: 240px;
     padding: 20px;
     border-radius: 10px;
     color: white;
@@ -66,6 +66,7 @@ body>header{
     text-align: center;
     margin-top: 100px;
     z-index: 1;
+    border-radius: 35px;
 }
 
 .box img {
@@ -74,3 +75,11 @@ body>header{
     margin-bottom: 10px;
 }
 
+/* 각 박스에 대한 위치 조정 */
+.box1 { margin-top: 250px; margin-left: -40px; }
+.box2 { margin-top: 30px; }
+.box3 { margin-left: -220px; margin-top: 330px; }
+.box5 { margin-top: 400px; margin-left: -220px; }
+.box6 { margin-top: 30px; }
+.box7 { margin-top: 330px; margin-left: -220px; }
+.box8 { margin-top: 400px; }
