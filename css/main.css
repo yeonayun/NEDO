@@ -1,5 +1,7 @@
 body{
-    background-color: #F8F8EE;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
 }
 
 body>header{
@@ -13,7 +15,7 @@ body>header{
 .navbar {
     display: flex;
     justify-content: flex-end;
-    background-color: #000000;
+    background-color: #d1d1d1;
     padding: 15px 20px;
 }
 
@@ -26,9 +28,23 @@ body>header{
 
 
 .navbar li a {
-    color: white;
+    color: black;
     padding: 10px 35px;
     text-decoration: none;
     font-size: 16px;
     font-weight: 100px;
 }
+
+#bacco-image {
+    position: fixed;
+    bottom: -10px;
+    right: 30px;
+    width: 590px;
+    height: 600px;
+}
+
+#bacco1-image {
+    width: 400px;
+    height: 480px;
+}
+
