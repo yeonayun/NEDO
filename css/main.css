@@ -67,9 +67,9 @@ body > header {
     margin-top: 100px;
     z-index: 1;
     border-radius: 35px;
-    opacity: 0; /* 초기 투명도 */
-    transform: translateY(20px); /* 초기 위치 */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* 부드러운 전환 효과 */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .box.visible {
@@ -78,12 +78,11 @@ body > header {
 }
 
 .box img {
-    width: 100px;
+    width: 130px;
     height: auto;
-    margin-bottom: 10px;
+    margin-bottom: -160px;
 }
 
-/* 각 박스에 대한 위치 조정 */
 .box1 { margin-top: 250px; margin-left: -40px; }
 .box2 { margin-top: 30px; }
 .box3 { margin-left: -220px; margin-top: 330px; }
@@ -91,3 +90,44 @@ body > header {
 .box6 { margin-top: 30px; }
 .box7 { margin-top: 330px; margin-left: -220px; }
 .box8 { margin-top: 400px; }
+
+.box p {
+    text-align: left;
+    padding-left: 5px; 
+    margin: 0;
+    font-size: 20px;
+}
+
+.text {
+    position: fixed;
+    bottom: 30px;
+    left: 10px;
+    color: #ffffff;
+    font-size: 50px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.mogra-text {
+    font-family: 'Mogra', cursive;
+    font-size: 55px;
+}
+
+.text2 {
+    position: fixed;
+    bottom: 460px;
+    right: 30px;
+    color: #ffffff;
+    font-size: 55px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 900;
+    z-index: 1;
+    text-align: right;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2),
+                 0 0 10px rgba(255, 255, 255, 0.2),
+                 0 0 15px rgba(255, 255, 255, 0.3),
+                 0 0 20px rgba(255, 255, 255, 0.3),
+                 0 0 30px rgba(255, 255, 255, 0.4);
+}
