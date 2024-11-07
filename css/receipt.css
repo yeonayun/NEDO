@@ -1,0 +1,36 @@
+body {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+body > header {
+    position: fixed; /* header의 위치를 고정 */
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10; /* header의 z-index를 높여 navbar를 위에 나타나게 함 */
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(255, 255, 255, 0.7); /* 흰색의 반투명 배경색 */
+    padding: 15px 20px;
+    z-index: 10; /* navbar의 z-index를 높게 설정 */
+}
+
+.navbar ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navbar li a {
+    color: black;
+    padding: 10px 35px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 100;
+}
