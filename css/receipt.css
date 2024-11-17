@@ -43,17 +43,48 @@ body > header {
     position: relative; 
 }
 
-.receipt img {
+.receipt {
     width: 360px;
     height: 570px;
+    position: relative;
+    margin-right: 500px;
+}
+
+.finish-img {
+    position: absolute;
+    transform: translateX(-50%);
+    width: 350px;
+    margin-right: 170px;
+    margin-top: 530px;
+}
+
+.btn-overlay {
+    position: absolute;
+    transform: translateX(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 180px;
+    margin-top: 540px;
+}
+
+.btn-overlay img {
+    width: 40px;
+    height: 40px;
 }
 
 .receipt1 {
-    position: relative;
+    position: absolute;
+    bottom: -600px; /* 초기 위치는 화면 아래로 숨김 */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom 2s ease-out, transform 2s ease-out; /* 애니메이션 효과 강화 */
+    display: none; /* 초기에는 숨김 */
 }
+
+
 
 .receipt1 img {
     width: 370px;
     height: 500px;
-    margin-top: 200px;
 }
