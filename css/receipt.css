@@ -12,13 +12,18 @@ body > header {
     z-index: 10;
 }
 
+.navbar-container {
+    position: relative;
+    z-index: 10;
+}
+
 .navbar {
     display: flex;
     justify-content: flex-end;
     background-color: rgba(255, 255, 255, 0.7);
     padding: 15px 20px;
     z-index: 10;
-    box-shadow: 0px 6px 30px rgba(255, 255, 255, 0.6); 
+    box-shadow: 0px 6px 30px rgba(255, 255, 255, 0.6);
 }
 
 .navbar ul {
@@ -35,6 +40,15 @@ body > header {
     font-size: 16px;
     font-weight: 100;
 }
+
+.finish-text {
+    position: absolute;
+    right: 300px;  /* 오른쪽 끝에 위치 */
+    top: 40px;    /* 네브바 바로 아래에 위치 */
+    width: 400px; /* 이미지 크기 조정 */
+    height: auto; /* 비율에 맞게 이미지 크기 조정 */
+}
+
 
 .Receipt {
     display: flex;
