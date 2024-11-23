@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'Pretendard-ExtraBold';
+    src: url('/fonts/Pretendard-ExtraBold.subset.woff2') format('truetype');
+    font-weight: bold;
+
+}
+
+/* 폰트를 사용할 요소에 적용 */
+body {
+    font-family: 'MyCustomFont', sans-serif;
+    /* 대체로 sans-serif 사용 */
+}
+
+/*고정코드 */
+body>header {
+    position: absolute;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    padding: 15px 20px;
+}
+
+.navbar ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+.navbar li a {
+    color: black;
+    padding: 10px 35px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 100px;
+}
+
+h1 {
+    margin-top: 120px;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Unbounded', sans-serif;
+}
+
+/* gonggu 코드 */
+.title {
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 30px;
+}
+
+#main_title,
+#sub_title {
+    text-align: center;
+}
+
+#main_title {
+    margin-top: 100px;
+    font-family: 'Pretendard-ExtraBold', sans-serif;
+    font-size: 45px;
+}
+
+#sub_title {
+    margin-top: 20px;
+}
