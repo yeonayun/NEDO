@@ -102,3 +102,71 @@ body > header {
     width: 370px;
     height: 500px;
 }
+
+@media only screen and (max-width: 1024px) {
+
+    .finish-text {
+        position: absolute;
+        right: 140px;  /* 오른쪽 끝에 위치 */
+        top: 80px;    /* 네브바 바로 아래에 위치 */
+        width: 400px; /* 이미지 크기 조정 */
+        height: auto; /* 비율에 맞게 이미지 크기 조정 */
+    }
+
+}
+
+/*mobile */
+@media only screen and (max-width: 768px) {
+
+    .Receipt {
+        display: flex;
+        justify-content: center;
+        position: relative; 
+    }
+    
+    .receipt {
+        width: 360px;
+        height: 570px;
+        position: relative;
+        margin-right: -10px;
+        margin-top: 200px;
+    }
+
+    .finish-img {
+        position: absolute;
+        transform: translateX(-50%);
+        width: 350px;
+        margin-right: -338px;
+        margin-top: 710px;
+    }
+
+    .btn-overlay {
+        position: absolute;
+        transform: translateX(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-right: -330px;
+        margin-top: 720px;
+    }
+    
+    .receipt1 {
+    position: absolute;
+    bottom: -600px; /* 초기 위치는 화면 아래로 숨김 */
+    left: 50%;
+    margin-left: -68px;
+    margin-bottom: 150px;
+    transform: translateX(-50%);
+    transition: bottom 2s ease-out, transform 2s ease-out; /* 애니메이션 효과 강화 */
+    display: none; /* 초기에는 숨김 */
+    }
+
+    .finish-text {
+        position: absolute;
+        right: -5px;  
+        top: 40px;    /* 네브바 바로 아래에 위치 */
+        width: 400px; /* 이미지 크기 조정 */
+        height: auto; /* 비율에 맞게 이미지 크기 조정 */
+    }
+
+  }
