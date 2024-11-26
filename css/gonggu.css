@@ -2,53 +2,18 @@
     font-family: 'Pretendard-ExtraBold';
     src: url('/fonts/Pretendard-ExtraBold.subset.woff2') format('truetype');
     font-weight: bold;
-
 }
 
 /* 폰트를 사용할 요소에 적용 */
 body {
-    font-family: 'MyCustomFont', sans-serif;
-    /* 대체로 sans-serif 사용 */
-}
-
-/*고정코드 */
-body>header {
-    position: absolute;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-}
-
-.navbar {
-    display: flex;
-    justify-content: flex-end;
-    background-color: rgba(255, 255, 255, 0.7);
-
-    padding: 15px 20px;
-}
-
-.navbar ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-
-.navbar li a {
-    color: black;
-    padding: 10px 35px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 100px;
+    background-color: #000000;
 }
 
 h1 {
     margin-top: 120px;
     font-size: 60px;
     text-align: center;
-    font-family: 'Unbounded', sans-serif;
+    font-family: 'Pretendard-ExtraBold', sans-serif;
 }
 
 /* gonggu 코드 */
@@ -66,11 +31,98 @@ h1 {
 }
 
 #main_title {
-    margin-top: 100px;
+    margin-top: 90px;
     font-family: 'Pretendard-ExtraBold', sans-serif;
-    font-size: 45px;
+    font-size: 40px;
 }
 
 #sub_title {
     margin-top: 20px;
+}
+
+/* frame select img */
+
+.frame_select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.frame_select>div {
+    flex: 1;
+    text-align: center;
+}
+
+#applemusic_full_img,
+#applemusic_white,
+#applemusic_small_img {
+    position: absolute;
+    /* max-width: 100%; */
+    transition: all 0.5s ease-in-out;
+    /* height: auto; */
+}
+
+#applemusic_white {
+    bottom: -1%;
+    left: 28%;
+    z-index: 1;
+    transform: rotate(-20deg);
+}
+
+#applemusic_small_img {
+    bottom: 1%;
+    right: 28%;
+    z-index: 1;
+    transform: rotate(20deg);
+    /* 15도 회전 */
+}
+
+#applemusic_full_img {
+    /* max-width: 80%; */
+    width: 330px;
+    height: auto;
+    display: block;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    z-index: 2;
+    transform: rotate(0deg);
+}
+
+#applemusic_small_img,
+#applemusic_white {
+    width: 280px;
+}
+
+#applemusic_white:hover {
+    width: 310px;
+    transform: rotate(0deg);
+    z-index: 3;
+}
+
+#applemusic_white:hover~#applemusic_full_img {
+    z-index: 1;
+}
+
+#applemusic_white:hover~#applemusic_small_img {
+    z-index: 0;
+}
+
+#applemusic_white:hover~#applemusic_small_img {
+    z-index: 0;
+}
+
+#applemusic_small_img:hover {
+    width: 310px;
+    transform: rotate(0deg);
+    z-index: 3;
+}
+
+#applemusic_small_img:hover~#applemusic_full_img {
+    z-index: 1;
+}
+
+#applemusic_small_img:hover~#applemusic_width {
+    z-index: 1;
 }
