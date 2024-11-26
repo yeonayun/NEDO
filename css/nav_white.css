@@ -1,8 +1,50 @@
+/*nav바가 하얀색*/
+body {
+    background-color: #F8F8EE;
+}
+
+body > header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
 .navbar {
-    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #000000;
+    padding: 15px 20px;
+    z-index: 10;
+    box-shadow: 0px 6px 30px rgba(255, 255, 255, 0.6);
+    transition: background-color 0.3s ease;
+    /* 배경색 전환 효과*/
+}
+
+.navbar ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 .navbar li a {
-    color: black;
-
+    color: #F8F8EE;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 100;
 }
+
+.navbar li:first-child {
+    margin-right: auto;
+}
+
+.navbar li:first-child a {
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 0;
+    font-family: 'Unbounded', sans-serif;
+}
+

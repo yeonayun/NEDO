@@ -1,0 +1,40 @@
+body {
+    background-color: black;
+}
+
+body > header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navbar-container {
+    position: relative;
+    z-index: 10;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 15px 20px;
+    z-index: 10;
+    box-shadow: 0px 6px 30px rgba(255, 255, 255, 0.6);
+}
+
+.navbar ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navbar li a {
+    color: black;
+    padding: 10px 35px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 100;
+}
