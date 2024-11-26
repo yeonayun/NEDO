@@ -12,3 +12,9 @@ document.addEventListener('scroll', () => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.container');
+    container.scrollLeft = container.offsetWidth / 2; // 첫 번째 박스를 중앙에 위치
+});
+

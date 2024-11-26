@@ -269,8 +269,86 @@ body>header {
         margin-top: 30px;
     }
 
-    
-    
-    
-   
+ /* 모바일 반응형 */
+@media only screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-wrap: nowrap; /* 한 줄 정렬 */
+        overflow-x: auto; /* 가로 스크롤 활성화 */
+        justify-content: flex-start; /* 박스 시작점부터 정렬 */
+        align-items: center; /* 세로 중앙 정렬 */
+        gap: 20px; /* 박스 간격 */
+        padding: 10px; /* 컨테이너 여백 */
+        height: 100vh; /* 화면 높이를 꽉 채움 */
+        width: auto; /* 컨테이너의 너비를 내용에 맞게 설정 */
+    }
+
+    .box {
+        flex: 0 0 auto; /* 고정된 크기로 정렬 */
+        margin: 0; /* 마진 제거 */
+        width: 210px;
+        height: 330px;
+    }
+
+    /* 가로 스크롤바 스타일 (선택 사항) */
+    .container::-webkit-scrollbar {
+        height: 8px; /* 스크롤바 높이 */
+    }
+
+    .container::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.5); /* 스크롤바 색상 */
+        border-radius: 4px; /* 스크롤바 둥글게 */
+    }
+
+    .container::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1); /* 스크롤바 트랙 색상 */
+    }
+
+    .text2{
+        bottom: 647px;
+        right: 20px;
+        font-size: 35px;
+    }
+
+    .mogra-text {
+        font-size: 54px;
+    }
+    .text {
+        bottom: 51px;
+        left: 18px;
+        font-size: 45px;
+    }
+
+    .box img{
+        width: 200px;
+        height: 180px;
+        margin-top: 60px;
+    }
+
+    .box3 img{
+        margin-top: 20px;
+    }
+
+    .box5 img{
+        margin-top: 30px;
+    }
+
+    .box6 img{
+        width: 180px;
+        height: 210px;
+        margin-top: 20px;
+    }
+
+    .box7 img{
+        margin-top: 30px;
+    }
+
+    .box-text{
+        font-size: 25px;
+    }
+
+    .box-text2{
+        font-size: 15px;
+    }
+}
 }
