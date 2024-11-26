@@ -1,29 +1,29 @@
+/*nav바가 하얀색*/
 body {
     background-color: #000000;
-    margin: 0;
-    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 body > header {
     position: fixed;
     top: 0;
-    right: 0;
     left: 0;
-    z-index: 10;
-}
-
-.navbar-container {
-    position: relative;
-    z-index: 10;
+    right: 0;
 }
 
 .navbar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between; 
+    align-items: center; 
     background-color: rgba(255, 255, 255, 0.7);
     padding: 15px 20px;
     z-index: 10;
     box-shadow: 0px 6px 30px rgba(255, 255, 255, 0.6);
+    transition: background-color 0.3s ease;
+    /* 배경색 전환 효과*/
 }
 
 .navbar ul {
@@ -33,12 +33,26 @@ body > header {
     list-style-type: none;
 }
 
+li{
+    list-style-type: none;
+}
 .navbar li a {
-    color: black;
-    padding: 10px 35px;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
     text-decoration: none;
     font-size: 16px;
     font-weight: 100;
+}
+
+.navbar li:first-child {
+    margin-right: auto;
+}
+
+.navbar li:first-child a {
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 0;
+    font-family: 'Unbounded', sans-serif;
 }
 
 .finish-text {
@@ -62,6 +76,7 @@ body > header {
     height: 570px;
     position: relative;
     margin-right: 500px;
+    margin-top: -10px;
 }
 
 .finish-img {
@@ -117,6 +132,25 @@ body::-webkit-scrollbar {
         height: auto; /* 비율에 맞게 이미지 크기 조정 */
     }
 
+    .receipt1 img {
+        margin-left: 70px;
+    }
+
+    .receipt{
+        margin-right: 420px;
+    }
+
+    .finish-img{
+        margin-right: 95px;
+    }
+
+    .btn-overlay img {
+        margin-right: -35px;
+    }
+
+    .finish-text {
+        margin-right: -38px;
+    }
 }
 
 /*mobile 반응형*/
@@ -191,7 +225,16 @@ body::-webkit-scrollbar {
 @media screen and (max-width:391px) {
         .receipt1 img {
             margin-left: 124px;
-            margin-bottom: 152px;
+            margin-bottom: 145px;
+        }
+
+        .btn-overlay img {
+            margin-right: 5px;
+        }
+
+        .finish-text{
+            margin-right: -1px;
+            margin-top: 10px;
         }
     }
   }
