@@ -96,6 +96,9 @@ body > header {
     display: none; /* 초기에는 숨김 */
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
 
 
 .receipt1 img {
@@ -154,8 +157,8 @@ body > header {
     position: absolute;
     bottom: -600px; /* 초기 위치는 화면 아래로 숨김 */
     left: 50%;
-    margin-left: -68px;
-    margin-bottom: 150px;
+    margin-left: -130px;
+    margin-bottom: 0;
     transform: translateX(-50%);
     transition: bottom 2s ease-out, transform 2s ease-out; /* 애니메이션 효과 강화 */
     display: none; /* 초기에는 숨김 */
@@ -169,4 +172,25 @@ body > header {
         height: auto; /* 비율에 맞게 이미지 크기 조정 */
     }
 
+  }
+
+@media screen and (max-width:550px) {
+    .receipt1 img {
+        margin-left: -41px;
+        margin-bottom: -150px;
+    }
+
+@media screen and (max-width:545px) {
+        .receipt1 img {
+            margin-left: 87px;
+            margin-bottom: 1px;
+        }
+    }    
+
+@media screen and (max-width:391px) {
+        .receipt1 img {
+            margin-left: 124px;
+            margin-bottom: 152px;
+        }
+    }
   }
