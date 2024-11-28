@@ -6,25 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/nav_black.css">
-    <title>main</title>
+    <link rel="stylesheet" href="/css/nav.css">
+    <title>index</title>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-                <li><a href="index.html">NEDO</a></li> <!-- NEDO 항목 -->
-                <li><a href="saja.html">SaJa</a></li> <!-- 오른쪽 항목들 -->
-                <li><a href="gonggu.html">gongu</a></li>
-                <li><a href="mypage.html">mypage</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">NEDO</a>
+        <div class="hamburger" id="hamburger">
+            &#9776;
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="saja.html">SaJa</a></li>
+            <li><a href="gonggu.html">gonggu</a></li>
+            <li><a href="mypage.html">mypage</a></li>
+        </ul>
+    </nav>
     
-    
-    
-
-    <h1>YOUANDI</h1>
+    <!-- <h1>YOUANDI</h1>
     <main>
         <div class="texts" id="main_text">YOUANDI</div>
         <div class="texts" id="ment_text">
@@ -33,8 +32,9 @@
             DA함께 살 수 있는
             GONgGU WEB-SITE</div>
         <div class="texts" id="bottom_text"></div>
-    </main>
-    <script src="/js/index.js"></script>
+    </main> -->
+
+    <script src="/js/navscript.js"></script>
 </body>
 
 </html>
