@@ -1,10 +1,14 @@
-body, html {
-    overflow: hidden; /* 스크롤을 방지 */
+/* body, html {
+    overflow: hidden; 스크롤 방지
+} */
+
+.navbar {
+    z-index: 1000;
 }
 
 #center-image {
-    width: 1600px;  /* 이미지 가로 크기 더 증가 */
-    height: 800px;  /* 이미지 세로 크기 유지 */
+    width: 1600px;
+    height: 800px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -32,6 +36,6 @@ body, html {
     right: 60px;
     font-size: 60px;
     font-weight: bold;
-    color: #175C2E; /* 텍스트 색상 */
+    color: #175C2E;
     font-family: 'Unbounded', sans-serif;
 }
