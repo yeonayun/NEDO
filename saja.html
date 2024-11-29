@@ -10,62 +10,58 @@
     <title>saja</title>
 </head>
 
-    <body>
-        <nav class="navbar">
-            <a href="index.html" class="logo">NEDO</a>
-            <div class="hamburger" id="hamburger">
-                &#9776;
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="saja.html">SaJa</a></li>
-                <li><a href="gonggu.html">gonggu</a></li>
-                <li><a href="mypage.html">mypage</a></li>
-            </ul>
-        </nav>
-    
-        <main class="content">
-            <h1 class="main-title">원하는 공구를 골라보세요</h1>
-            <div class="hashtags">
-                <button>#food</button>
-                <button>#fruit</button>
-                <button>#music</button>
-                <button>#clothes</button>
-                <button>#makeup</button>
-                <button>....</button>
-            </div>
-        </main>
-
-        <div class="image-grid">
-            <a href="saja2.html" class="image-box">
-                <img src="image/image1.png" alt="Image 1">
-            </a>
-            <a href="saja2.html" class="image-box">
-                <img src="image/image2.png" alt="Image 2">
-            </a>
-            <a href="saja2.html" class="image-box">
-                <img src="image/image3.png" alt="Image 3">
-            </a>
-            <a href="saja2.html" class="image-box">
-                <img src="image/image4.png" alt="Image 4">
-            </a>
-            <a href="saja2.html" class="image-box">
-                <img src="image/image5.png" alt="Image 5">
-            </a>
-            <a href="saja2.html" class="image-box">
-                <img src="image/image6.png" alt="Image 6">
-            </a>
-            <a href="saja2.html" class="image-box">
-                <img src="image/image7.png" alt="Image 7">
-            </a>
-            <a href="saja2.html" class="image-box">
-                <img src="image/image8.png" alt="Image 8">
-            </a>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">NEDO</a>
+        <div class="hamburger" id="hamburger">
+            &#9776;
         </div>
-        
-    
-        <script src="js/navscript.js"></script>
-        <script src="saja.js"></script>
-    
-    </body>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="saja.html">SaJa</a></li>
+            <li><a href="gonggu.html">gonggu</a></li>
+            <li><a href="mypage.html">mypage</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1 class="main-title">원하는 공구를 골라보세요</h1>
+        <div class="hashtags">
+            <button data-filter="food">#food</button>
+            <button data-filter="fruit">#fruit</button>
+            <button data-filter="music">#music</button>
+            <button data-filter="clothes">#clothes</button>
+            <button data-filter="makeup">#makeup</button>
+        </div>
+    </main>
+
+    <div class="image-grid">
+        <a href="saja2.html" class="image-box" data-category="food">
+            <img src="image/image1.png" alt="Image 1">
+        </a>
+        <a href="saja2.html" class="image-box" data-category="fruit">
+            <img src="image/image2.png" alt="Image 2">
+        </a>
+        <a href="saja2.html" class="image-box" data-category="music">
+            <img src="image/image3.png" alt="Image 3">
+        </a>
+        <a href="saja2.html" class="image-box" data-category="clothes">
+            <img src="image/image4.png" alt="Image 4">
+        </a>
+        <a href="saja2.html" class="image-box" data-category="makeup">
+            <img src="image/image5.png" alt="Image 5">
+        </a>
+        <a href="saja2.html" class="image-box" data-category="makeup">
+            <img src="image/image6.png" alt="Image 6">
+        </a>
+        <a href="saja2.html" class="image-box" data-category="fruit">
+            <img src="image/image7.png" alt="Image 7">
+        </a>
+        <a href="saja2.html" class="image-box" data-category="clothes">
+            <img src="image/image8.png" alt="Image 8">
+        </a>
+    </div>
+
+    <script src="js/saja.js"></script>
+</body>
 
 </html>
