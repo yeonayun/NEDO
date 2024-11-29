@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 #start_page,
 #main_page {
     heigh: 100vh;
@@ -29,7 +33,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .box {
@@ -159,7 +163,7 @@
         0 0 30px rgba(255, 255, 255, 0.4);
 }
  /*tablet 반응형*/
-@media only screen and (max-width: 1024px) {
+ @media only screen and (max-width: 1200px) {
     .box {
         width: 140px;
         height: 220px;
@@ -182,12 +186,12 @@
 
    .box5{
     margin-top: 379px;
-    margin-left: -207px;
+    margin-left: -200px;
    }
 
    .box7{
     margin-top: 330px;
-    margin-left: -205px;
+    margin-left: -195px;
    }
 
    .box1{
@@ -225,6 +229,127 @@
     #bacco1-image {
         margin-left: -10px;
     }
+}
+
+    @media only screen and (max-width: 1010px) {
+        .box1 {
+            margin-top: 250px;
+            margin-left: -10px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 18px;
+        }
+
+        .text2 {
+            font-size: 50px;
+        }
+    }
+
+    @media only screen and (max-width: 994px) {
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .box1 {
+            margin-left: -10px;
+        }
+    }
+
+    @media only screen and (max-width: 978px) {
+        .box1 {
+            margin-top: 250px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+    }
+
+    @media only screen and (max-width: 970px) {
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+    }
+
+    @media only screen and (max-width: 968px) {
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-left: -7px;
+        }
+        .box1 {
+            margin-top: 250px;
+            margin-left: -10px;
+        }
+    }
+
+    @media only screen and (max-width: 932px) {
+        .box1 {
+            margin-top: 250px;
+            margin-left: -8px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-left: -30px;
+        }
+    }
+
+    @media only screen and (max-width: 910px) {
+        .box1 {
+            margin-top: 250px;
+            margin-left: -8px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-left: -60px;
+        }
+
+        @media only screen and (max-width: 890px) {
+            
+            .container {
+                margin-left: -70px;
+            }
+    
+
+        .box1 {
+            margin-left: -0px;
+        }
+    }
+
+    @media only screen and (max-width: 875px) {
+            
+        .container {
+            margin-left: -90px;
+        }
+
+
+    .box1 {
+        margin-left: -0px;
+    }
+}
+
 
  /* 모바일 반응형 */
 @media only screen and (max-width: 500px) {
@@ -240,11 +365,26 @@
         width: auto; /* 컨테이너의 너비를 내용에 맞게 설정 */
     }
 
+    #bacco-image {
+        position: fixed;
+        bottom: -10px;
+        right: -20px;
+        width: 500px;
+        height: 550px;
+    }
+
+    #bacco1-image {
+        width: 300px;
+        height: 380px;
+        position: fixed;
+    }
+
     .box {
         flex: 0 0 auto; /* 고정된 크기로 정렬 */
         margin: 0; /* 마진 제거 */
         width: 210px;
         height: 330px;
+        margin-bottom: 110px;
     }
 
     /* 가로 스크롤바 스타일 (선택 사항) */
@@ -262,18 +402,19 @@
     }
 
     .text2{
-        bottom: 647px;
+        bottom: 520px;
         right: 20px;
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .mogra-text {
-        font-size: 54px;
+        font-size: 50px;
+        
     }
     .text {
-        bottom: 51px;
+        bottom: 5px;
         left: 18px;
-        font-size: 45px;
+        font-size: 35px;
     }
 
     .box img{
@@ -308,4 +449,4 @@
         font-size: 15px;
     }
 }
-}
+    }
