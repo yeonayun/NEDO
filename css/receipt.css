@@ -3,7 +3,7 @@
 .finish-text {
     position: absolute;
     right: 300px;  /* 오른쪽 끝에 위치 */
-    top: 40px;    /* 네브바 바로 아래에 위치 */
+    top: 50px;    /* 네브바 바로 아래에 위치 */
     width: 400px; /* 이미지 크기 조정 */
     height: auto; /* 비율에 맞게 이미지 크기 조정 */
 }
@@ -21,7 +21,6 @@
     height: 570px;
     position: relative;
     margin-right: 500px;
-    margin-top: -10px;
 }
 
 .finish-img {
@@ -89,10 +88,6 @@ body::-webkit-scrollbar {
         margin-right: 95px;
     }
 
-    .btn-overlay img {
-        margin-right: -35px;
-    }
-
     .finish-text {
         margin-right: -38px;
     }
@@ -112,7 +107,7 @@ body::-webkit-scrollbar {
         height: 570px;
         position: relative;
         margin-right: -10px;
-        margin-top: 200px;
+        margin-top: 170px;
     }
 
     .finish-img {
@@ -120,7 +115,7 @@ body::-webkit-scrollbar {
         transform: translateX(-50%);
         width: 350px;
         margin-right: -338px;
-        margin-top: 710px;
+        margin-top: 695px;
     }
 
     .btn-overlay {
@@ -130,15 +125,15 @@ body::-webkit-scrollbar {
         border: none;
         cursor: pointer;
         margin-right: -330px;
-        margin-top: 720px;
+        margin-top: 705px;
     }
     
     .receipt1 {
     position: absolute;
     bottom: -600px; /* 초기 위치는 화면 아래로 숨김 */
     left: 50%;
-    margin-left: -130px;
-    margin-bottom: 0;
+    margin-left: -122px;
+    margin-bottom: -42px;
     transform: translateX(-50%);
     transition: bottom 2s ease-out, transform 2s ease-out; /* 애니메이션 효과 강화 */
     display: none; /* 초기에는 숨김 */
@@ -146,33 +141,33 @@ body::-webkit-scrollbar {
 
     .finish-text {
         position: absolute;
-        right: -5px;  
-        top: 40px;    /* 네브바 바로 아래에 위치 */
+        top: 70px;
+        left: 60px;
         width: 400px; /* 이미지 크기 조정 */
         height: auto; /* 비율에 맞게 이미지 크기 조정 */
     }
 
   }
 
-@media screen and (max-width:550px) {
+/* @media screen and (max-width:550px) {
     .receipt1 img {
         margin-left: -41px;
         margin-bottom: -150px;
-    }
+    }}
 
 @media screen and (max-width:545px) {
         .receipt1 img {
             margin-left: 87px;
-            margin-bottom: 1px;
+            margin-bottom: 80px;
         }
 
 
-    }    
+    }     */
 
-@media screen and (max-width:391px) {
+/* @media screen and (max-width:391px) {
         .receipt1 img {
-            margin-left: 124px;
-            margin-bottom: 145px;
+            margin-left: 132px;
+            margin-bottom: 80px;
         }
 
         .btn-overlay img {
@@ -184,4 +179,4 @@ body::-webkit-scrollbar {
             margin-top: 10px;
         }
     }
-  }
+  } */
