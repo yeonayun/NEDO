@@ -133,7 +133,7 @@ body::-webkit-scrollbar {
     bottom: -600px; /* 초기 위치는 화면 아래로 숨김 */
     left: 50%;
     margin-left: -122px;
-    margin-bottom: -42px;
+    margin-bottom: -43px;
     transform: translateX(-50%);
     transition: bottom 2s ease-out, transform 2s ease-out; /* 애니메이션 효과 강화 */
     display: none; /* 초기에는 숨김 */
@@ -148,35 +148,3 @@ body::-webkit-scrollbar {
     }
 
   }
-
-/* @media screen and (max-width:550px) {
-    .receipt1 img {
-        margin-left: -41px;
-        margin-bottom: -150px;
-    }}
-
-@media screen and (max-width:545px) {
-        .receipt1 img {
-            margin-left: 87px;
-            margin-bottom: 80px;
-        }
-
-
-    }     */
-
-/* @media screen and (max-width:391px) {
-        .receipt1 img {
-            margin-left: 132px;
-            margin-bottom: 80px;
-        }
-
-        .btn-overlay img {
-            margin-right: 5px;
-        }
-
-        .finish-text{
-            margin-right: -1px;
-            margin-top: 10px;
-        }
-    }
-  } */
