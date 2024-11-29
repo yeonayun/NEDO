@@ -71,7 +71,7 @@ body::-webkit-scrollbar {
     .finish-text {
         position: absolute;
         right: 140px;  /* 오른쪽 끝에 위치 */
-        top: 80px;    /* 네브바 바로 아래에 위치 */
+        top: 45px;    /* 네브바 바로 아래에 위치 */
         width: 400px; /* 이미지 크기 조정 */
         height: auto; /* 비율에 맞게 이미지 크기 조정 */
     }
