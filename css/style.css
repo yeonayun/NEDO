@@ -2,6 +2,10 @@
     overflow: hidden; 스크롤 방지
 } */
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .navbar {
     z-index: 1000;
 }
