@@ -1,0 +1,199 @@
+
+.main-content {
+    color: #fff; /* 흰색 텍스트 */
+    font-size: 20px;
+    
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-family: 'Unbounded', sans-serif;
+    text-align: center;
+    margin-top: 80px;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.product-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.product-image {
+    width: 250px;
+    border-radius: 20px;
+}
+
+.product-info {
+    text-align: left;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tag {
+    width: 80px;  /* 고정된 너비 */
+    padding: 10px 20px;  /* 위 아래, 왼쪽 오른쪽 패딩 */
+    border-radius: 20px;  /* 둥근 모서리 */
+    background-color: #000;  /* 버튼 배경 검정색 */
+    color: #fff;  /* 글씨 흰색 */
+    border: 2px solid #fff;  /* 테두리 흰색 */
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Unbounded', sans-serif;  /* 폰트 설정 */
+    box-shadow: 2px 2px 6px rgba(255, 255, 255, 0.5);  /* 흰색 그림자 */
+    text-align: center;  /* 텍스트 가운데 정렬 */
+    margin-top: 50px;
+}
+
+
+.info-item {
+    margin-bottom: 20px;  /* 항목 간 간격을 추가 */
+    line-height: 1.6;  /* 줄 간격을 늘림 */
+}
+
+/* 각 항목 사이에 간격을 추가 */
+.info-item .bold-text {
+    margin-right: 38px;  /* '공구 모집 기간'과 날짜 사이, '모집 인원 현황'과 숫자 사이 등의 공백 추가 */
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+/* 줄 간격을 더 넓게 설정 */
+.info-item br {
+    margin-bottom: 20px;  /* 줄바꿈 사이에 여백을 추가 */
+}
+
+
+.product-left {
+    display: flex;
+    flex-direction: column;  /* 이미지 위 아래로 배치되도록 설정 */
+    align-items: center;  /* 중앙 정렬 */
+    gap: 10px;  /* 이미지와 버튼 사이의 간격을 설정 */
+    margin-right: 70px;
+    margin-top: 35px;
+}
+
+.join-btn {
+    width: 240px;
+    padding: 10px 20px;  /* 위 아래, 왼쪽 오른쪽 패딩 */
+    border-radius: 15px;  /* 둥근 모서리 */
+    background-color: #000;  /* 버튼 배경 검정색 */
+    color: #fff;  /* 글씨 흰색 */
+    border: 2px solid #fff;  /* 테두리 흰색 */
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Unbounded', sans-serif;  /* 폰트 설정 */
+    transition: background-color 0.3s, transform 0.2s, color 0.3s;  /* 애니메이션 효과 */
+    box-shadow: 2px 2px 6px rgba(255, 255, 255, 0.5);  /* 흰색 그림자 */
+    text-align: center;  /* 텍스트 가운데 정렬 */
+    margin-top: 15px;
+}
+
+/* 버튼에 마우스를 올렸을 때의 효과 */
+.join-btn:hover {
+    background-color: #fff;  /* 배경 흰색 */
+    color: #000;  /* 글씨 검정색 */
+    transform: scale(1.05);  /* 약간의 확대 효과 */
+}
+
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* 기본적으로 숨김 */
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.9); /* 투명도가 약간 있는 흰색 배경 */
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* 부드러운 그림자 효과 */
+    }
+
+    .nav-links.active {
+        display: flex; /* active 클래스가 추가되면 보이게 */
+    }
+
+    .hamburger {
+        display: block; /* 모바일에서 햄버거 메뉴 버튼 표시 */
+    }
+
+    /* 로고 크기 조정 */
+    .logo {
+        font-size: 22px;
+    }
+
+    /* 네비게이션 링크 크기 조정 */
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    /* 모바일에서 product-container의 배치 변경 */
+    .product-container {
+        flex-direction: column; /* 세로로 배치 */
+        align-items: center;
+    }
+
+    .product-left {
+        margin-right: 0; /* 이미지와 버튼 사이에 여백 없앰 */
+        margin-top: 20px;
+    }
+
+    /* 버튼 크기 조정 */
+    .join-btn {
+        width: 200px;
+        padding: 10px 20px;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    /* 글씨 크기 조정 */
+    .title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .product-info {
+        text-align: center;
+    }
+
+    /* 태그 크기와 배치 조정 */
+    .tags {
+        flex-direction: row; /* 가로로 정렬 */
+        gap: 15px;
+        align-items: center;
+        margin-left: 45px;
+    }
+
+    .tag {
+        width: auto;  /* 고정된 너비를 없앰 */
+        padding: 8px 15px;  /* 작은 패딩으로 조정 */
+        font-size: 14px;  /* 작은 폰트 크기 */
+    }
+
+    .info-item {
+        font-size: 16px; /* 글씨 크기 조정 */
+    }
+
+    /* info-item 간 간격 조정 */
+    .info-item .bold-text {
+        margin-right: 0;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 모바일에서도 두 개의 항목이 한 줄에 나란히 배치 */
+    }
+
+}
