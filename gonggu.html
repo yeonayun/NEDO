@@ -43,7 +43,9 @@
             <div class="modal_content">
                 <div id="modal_title">image를 업로드하고 [ item name & 해시태그 ]를 작성해주세요</div>
                 <div class="custom_card">
-                    <div id="item_name">item<br>name...</div>
+                    <!-- <div id="item_name">item<br>name...</div> -->
+                    <textarea id="item_name" placeholder="item
+name"></textarea>
                     <div id="item_ment">공구할 사람</div>
                     <input id="hashtag_input" placeholder="# Enter a hashtag here...">
                     <div id="image_upload_text">image<br>upload</div>
@@ -69,6 +71,7 @@
                             <div class="colors" id="black" data-color="black"></div>
                         </div>
                     </div>
+
                     <div class="category">
                         <div id="category_text">category</div>
                         <div id="category_sub_text"><span>ｅｘ） AppleMusic, 2700won </span>
@@ -89,9 +92,11 @@
                     <div class="calendar">
                         <div id="calendar_text">공구 모집 기간을 설정해주세요</div>
                         <div id="start_calendar" class="calendar_input" data-date="">
+
                             <img src="/image/CalendarCheck.png" alt="">부터
                         </div>
                         <div id="last_calendar" class="calendar_input" data-date="">
+
                             <img src="/image/CalendarCheck.png" alt="">까지
                         </div>
                     </div>
@@ -109,8 +114,10 @@
                         </div>
                         <button>Public</button>
                     </div>
+
                 </div>
             </div>
+            <a href="/receipt_owner.html"><button id="next">next</button></a>
         </div>
         <button id="next" class="next_btn">next</button>
 

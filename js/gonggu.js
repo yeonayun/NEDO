@@ -12,13 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const select = document.getElementById('category_select');
     const newCategoryInput = document.getElementById('new_category_input');
     const addOptionButton = document.getElementById('add_option_button');
-    const nextButton = document.querySelector('#next');
-
-    // 페이지가 로드되면 바로 모달을 열고 버튼도 표시
-    window.onload = function () {
-        modal.classList.add('show');
-        nextButton.style.display = 'block'; // 버튼을 바로 보이게 설정
-    };
 
     // 모달 열기
     frameImages.forEach((img) => {
@@ -29,6 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
+    // const modalContent = document.querySelector(".modal_content");
+
+    // modalContent.style.zIndex = "1003";
+    // customCard.style.zIndex = "1002";
+
+    // modal_content의 위치를 custom_card 위로 조정
     // 모달 닫기
     modal.addEventListener("click", () => {
         modal.style.display = "none";
@@ -108,8 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-
-
     // 날짜 선택 처리
     flatpickr("#start_calendar", {
         enableTime: false,
@@ -129,24 +126,34 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+
+    // // 아이템 이름 수정 처리
+    // itemName.addEventListener("click", function () {
+    //     const currentText = itemName.innerHTML.replace('<br>', '\n');
+    //     const input = document.createElement("input");
+    //     input.type = "text";
+    //     input.value = currentText;
+    //     input.style.width = "100%";
+    //     input.style.border = "none";
+    //     input.style.fontSize = "20px";
+    //     itemName.innerHTML = "";
+    //     itemName.appendChild(input);
+
+    //     input.addEventListener("blur", function () {
+    //         const updatedText = input.value.replace(/\n/g, '<br>');
+    //         itemName.innerHTML = updatedText;
+    //     });
+
+    //     input.focus();
+    // });
     // 아이템 이름 수정 처리
     itemName.addEventListener("click", function () {
-        const currentText = itemName.innerHTML.replace('<br>', '\n');
-        const input = document.createElement("input");
-        input.type = "text";
-        input.value = currentText;
-        input.style.width = "100%";
-        input.style.border = "none";
-        input.style.fontSize = "20px";
-        itemName.innerHTML = "";
-        itemName.appendChild(input);
+        itemName.contentEditable = true; // contenteditable 속성으로 텍스트를 수정 가능하게 만듦
+        itemName.focus();
+    });
 
-        input.addEventListener("blur", function () {
-            const updatedText = input.value.replace(/\n/g, '<br>');
-            itemName.innerHTML = updatedText;
-        });
-
-        input.focus();
+    itemName.addEventListener("blur", function () {
+        itemName.contentEditable = false; // 수정이 끝나면 수정 불가능하게 만듦
     });
 
     // 마지막 날짜 변경 처리
@@ -180,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 카테고리 선택 및 추가 처리
     select.addEventListener('change', handleCategoryChange);
 
-    addOptionButton.addEventListener('click', addNewCategory);
+    // addOptionButton.addEventListener('click', addNewCategory);
 
     function handleCategoryChange() {
         if (select.value === "add_new") {
@@ -207,29 +214,37 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
-
-});
-
-document.addEventListener("DOMContentLoaded", () => {
+    // 텍스트 요소들
     const textElements = [
         document.getElementById("item_name"),
         document.getElementById("item_ment"),
         document.getElementById("hashtag_input"),
         document.getElementById("image_upload_text"),
     ];
+    console.log(itemName);
 
+    // 색상 버튼 요소들
     const colorOptions = document.querySelectorAll(".colors");
-
+    // 색상 선택 처리
     colorOptions.forEach(color => {
+
         color.addEventListener("click", () => {
             const selectedColor = color.getAttribute("data-color");
 
-            // 모든 텍스트 요소의 색상 변경
+            // 텍스트 요소들의 색상 변경
             textElements.forEach(element => {
+                // 텍스트 색상
                 element.style.color = selectedColor;
+
+                // textarea인 경우 placeholder 색상 변경
+                if (element.tagName.toLowerCase() === 'textarea' || element.tagName.toLowerCase() === 'input') {
+                    element.style.color = selectedColor; // 텍스트 색상 변경
+                    // placeholder 색상 변경
+                    element.style.setProperty('--placeholder-color', selectedColor);
+                }
             });
         });
     });
+
+
 });
-
-

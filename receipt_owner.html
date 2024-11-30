@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/receipt_owner.css">
+    <link rel="stylesheet" href="/css/nav2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+
+    <title>Receipt</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">NEDO</a>
+        <div class="hamburger" id="hamburger">
+            &#9776;
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="saja.html">SaJa</a></li>
+            <li><a href="gonggu.html">gonggu</a></li>
+            <li><a href="mypage.html">mypage</a></li>
+        </ul>
+    </nav>
+    <div class="navbar-container">
+        <img class="finish-text" src="image/receiptowner_chat (2).png" alt="Finish Text">
+    </div>
+
+    <div class="Receipt">
+        <div class="bank_input">
+
+            <input type="number" placeholder="은행을 입력해주세요" id="bank">
+            <input type="number" placeholder="계좌번호를 입력해주세요" id="bank_num">
+            <input type="number" placeholder="인당 금액을 입력해주세요" id="money">
+        </div>
+        <img class="receipt" src="image/receiptowner (2).png" alt="Receipt">
+        <img class="finish-img" src="image/receiptowner_send.png" alt="Finish">
+        <img class="qr" src="image/QrCode.png" alt="QR code" style="cursor:pointer;">
+        <input type="file" id="qr-image-upload" style="display: none;" accept="image/*">
+
+        <button class="btn-overlay" onclick="moveReceipt()">
+            <img src="image/button1.png" alt="Button">
+        </button>
+
+
+    </div>
+
+    <div class="receipt1">
+        <img src="image/owner_check.png" alt="Receipt1">
+    </div>
+    <div id="popup1" class="popup">
+        <div class="popup-content">
+            <p>공구를 등록하시겠습니까?</p>
+            <button class="popup_btn" onclick="registerTool()">네</button>
+            <button class="popup_btn" onclick="closePopup()">아니오</button>
+        </div>
+    </div>
+
+    <!-- 두 번째 팝업 (공구 등록 완료) -->
+    <div id="popup2" class="popup">
+        <div class="popup-content">
+            <p>공구 등록이 완료되었습니다.</p>
+            <button class="popup_btn" onclick="closePopup2()">닫기</button>
+        </div>
+    </div>
+
+    <script src="/js/receipt_owner.js"></script>
+    <script src="/js/navscript.js"></script>
+</body>
+
+</html>
