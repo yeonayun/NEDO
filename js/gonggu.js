@@ -154,22 +154,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // 날짜 비교 및 팝업 처리
     document.getElementById('last_calendar').addEventListener('change', handleLastCalendarChange);
 
-    // select 메뉴 변경 시 처리
+
     const select = document.getElementById('category_select');
     const newCategoryInput = document.getElementById('new_category_input');
+    const addOptionButton = document.getElementById('add_option_button');
+
+    // 카테고리 선택 시 처리
     select.addEventListener('change', handleCategoryChange);
 
-    function handleSelectChange(select) {
-        if (select.value === "custom") {
-            document.getElementById("new_option").style.display = "inline-block";
-            document.getElementById("add_option_button").style.display = "inline-block";
-            select.value = ""; // Reset select to nothing after choosing '+'
-        } else {
-            document.getElementById("new_option").style.display = "none";
-            document.getElementById("add_option_button").style.display = "none";
-        }
-    }
-
+    // 카테고리 변경 시 새 카테고리 추가 버튼과 입력 필드 표시 여부 조정
     function handleCategoryChange() {
         const select = document.getElementById('category_select');
         const newCategoryInput = document.getElementById('new_category_input');
@@ -181,8 +174,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // 새 카테고리 추가 버튼 클릭 시 처리
+    addOptionButton.addEventListener('click', addNewCategory);
+
+    // 새 카테고리 추가 함수
     function addNewCategory() {
-        const select = document.getElementById('category_select');
+        // const select = document.getElementById('category_select');
         const newCategory = document.getElementById('new_category').value.trim();
 
         if (newCategory !== "") {
@@ -190,15 +187,14 @@ document.addEventListener("DOMContentLoaded", () => {
             newOption.value = newCategory.toLowerCase().replace(/\s+/g, '_');
             newOption.textContent = newCategory;
 
-            select.insertBefore(newOption, select.lastElementChild);
+            select.insertBefore(newOption, select.lastElementChild); // 새로운 옵션 추가
+            select.value = newOption.value; // 추가된 카테고리로 선택
 
-            select.value = newOption.value;
-
-            document.getElementById('new_category').value = "";
-            document.getElementById('new_category_input').style.display = "none";
-            select.style.display = "block";
+            document.getElementById('new_category').value = ""; // 입력 필드 초기화
+            document.getElementById('new_category_input').style.display = "none"; // 입력 필드 숨기기
         }
     }
+
 });
 
 // 날짜를 선택한 후 호출되는 함수

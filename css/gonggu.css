@@ -109,20 +109,6 @@ h1 {
     box-sizing: border-box;
 }
 
-.frame_select img {
-    width: 100px;
-    height: 100px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    /* 부드러운 크기/회전 효과 */
-}
-
-.frame_select img:hover {
-    transform: scale(1.2) rotate(10deg);
-    /* 확대 및 회전 효과 */
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.5);
-    /* 그림자 추가 */
-}
-
 .frame_select>div {
     flex: 1;
     text-align: center;
@@ -138,25 +124,17 @@ h1 {
 }
 
 #applemusic_white {
-    width: 300px;
-    height: auto;
-    display: block;
     bottom: -1%;
     left: 28%;
     z-index: 1;
     transform: rotate(-20deg);
-    position: relative;
 }
 
 #applemusic_small_img {
-    width: 300px;
-    height: auto;
-    display: block;
     bottom: 1%;
     right: 28%;
     z-index: 1;
     transform: rotate(20deg);
-    position: relative;
     /* 15도 회전 */
 }
 
