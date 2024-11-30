@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="/css/nav2.css">
     <link rel="stylesheet" href="/css/gonggu.css">
     <link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
     <title>main</title>
 </head>
 
@@ -32,7 +35,7 @@
         <div class="frame_select">
             <img src="/image/white.png" alt="" id="applemusic_white">
             <img src="/image/full_img.png" alt="" id="applemusic_full_img">
-            <img src="/image/small_img.png" alt="" id="applemusic_small_img">
+            <!-- <img src="/image/small_img.png" alt="" id="applemusic_small_img"> -->
         </div>
 
         <!-- 커스텀 박스 -->
@@ -42,34 +45,55 @@
                 <div class="custom_card">
                     <div id="item_name">item<br>name...</div>
                     <div id="item_ment">공구할 사람</div>
-                    <div id="hashtag_input"></div>
-                    <div class="image_upload">
-                        <div id="image_upload_text">image<br>upload</div>
-                        <!-- <div id="select_icon"></div> -->
-                    </div>
+                    <input id="hashtag_input" placeholder="# Enter a hashtag here...">
+                    <div id="image_upload_text">image<br>upload</div>
+                    <div id="select_icon"></div>
                     <img id="custom_card_img" src="/image/custom_card.png" alt="">
+
+                    <div id="date_error_popup" class="popup">
+                        <div class="popup_content">
+                            <p>마감 날짜가 시작 날짜보다 이전입니다. 올바른 날짜를 선택해주세요.</p>
+                            <button id="close_popup_btn">닫기</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="custom_box">
                     <div class="text_color">
                         <div id="text_color">text color</div>
-                        <div class="colors" id="blue"></div>
-                        <div class="colors" id="white"></div>
-                        <div class="colors" id="green"></div>
-                        <div class="colors" id="red"></div>
-                        <div class="colors" id="purple"></div>
-                        <div class="colors" id="black"></div>
+                        <div class="colors_container">
+                            <div class="colors" id="blue"></div>
+                            <div class="colors" id="white"></div>
+                            <div class="colors" id="green"></div>
+                            <div class="colors" id="red"></div>
+                            <div class="colors" id="purple"></div>
+                            <div class="colors" id="black"></div>
+                        </div>
                     </div>
                     <div class="category">
                         <div id="category_text">category</div>
-                        <div id="category_sub_text"><span>ｅｘ） AppleMusic, 2700won </span> <br>
-                            Tip 최대 2개 생성 가능
+                        <div id="category_sub_text"><span>ｅｘ） AppleMusic, 2700won </span>
                         </div>
-                        <div id="category_select"></div>
+                        <select id="category_select" onchange="handleCategoryChange()">
+                            <option value="" disabled selected>카테고리를 고르세요.</option>
+                            <option value="option1">과일</option>
+                            <option value="option2">옷</option>
+                            <option value="option3">음악</option>
+                            <option value="add_new">새 카테고리 추가...</option>
+                        </select>
+
+                        <div id="new_category_input" style="display:none;">
+                            <input type="text" id="new_category" placeholder="새 카테고리 입력">
+                            <button onclick="addNewCategory()">추가</button>
+                        </div>
                     </div>
                     <div class="calendar">
                         <div id="calendar_text">공구 모집 기간을 설정해주세요</div>
-                        <div id="start_calendar">부터</div>
-                        <div id="last_calendar">까지</div>
+                        <div id="start_calendar" class="calendar_input" data-date="">
+                            <img src="/image/CalendarCheck.png" alt="">부터
+                        </div>
+                        <div id="last_calendar" class="calendar_input" data-date="">
+                            <img src="/image/CalendarCheck.png" alt="">까지
+                        </div>
                     </div>
                     <div class="tip_private">
                         <div id="tip_private_text">
