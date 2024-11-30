@@ -14,6 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const addOptionButton = document.getElementById('add_option_button');
     const nextButton = document.querySelector('#next');
 
+    // 페이지가 로드되면 바로 모달을 열고 버튼도 표시
+    window.onload = function () {
+        modal.classList.add('show');
+        nextButton.style.display = 'block'; // 버튼을 바로 보이게 설정
+    };
+
     // 모달 열기
     frameImages.forEach((img) => {
         img.addEventListener("click", () => {
@@ -22,11 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 페이지가 로드되면 바로 모달을 열고 버튼도 표시
-    window.onload = function () {
-        modal.classList.add('show');
-        nextButton.style.display = 'block'; // 버튼을 바로 보이게 설정
-    };
+
     // 모달 닫기
     modal.addEventListener("click", () => {
         modal.style.display = "none";
@@ -37,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
     modalBox.addEventListener("click", (event) => {
         event.stopPropagation();
     });
-
 
 
     // 해시태그 입력 처리
